@@ -29,7 +29,7 @@ const server = http.createServer(app);
 // Add basic health check endpoints
 probe(app);
 
-const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-istio-circuit-breaker-name:8080';
+const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-istio-circuit-breaker-redhat-name:8080';
 
 // Serve index.html from the file system
 app.use(express.static(path.join(__dirname, 'public')));

@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: nodejs-istio-circuit-breaker-gateway
+  name: nodejs-istio-circuit-breaker-redhat-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -16,22 +16,22 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: nodejs-istio-circuit-breaker-greeting
+  name: nodejs-istio-circuit-breaker-redhat-greeting
 spec:
   hosts:
   - "*"
   gateways:
-  - nodejs-istio-circuit-breaker-gateway
+  - nodejs-istio-circuit-breaker-redhat-gateway
   http:
   - match:
     - uri:
-        prefix: /nodejs-istio-circuit-breaker/
+        prefix: /nodejs-istio-circuit-breaker-redhat/
     - uri:
-        prefix: /nodejs-istio-circuit-breaker
+        prefix: /nodejs-istio-circuit-breaker-redhat
     rewrite:
       uri: /
     route:
     - destination:
-        host: nodejs-istio-circuit-breaker-greeting
+        host: nodejs-istio-circuit-breaker-redhat-greeting
         port:
           number: 8080

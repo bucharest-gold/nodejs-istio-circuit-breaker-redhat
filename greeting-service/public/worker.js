@@ -13,7 +13,7 @@ onmessage = function (e) {
 
     var getUrl = "api/greeting";
     if (!e.data.href.endsWith("/")) {
-      getUrl = "nodejs-istio-circuit-breaker/" + getUrl;
+      getUrl = "nodejs-istio-circuit-breaker-redhat/" + getUrl;
     }
 
     xhr.open('GET', getUrl + '?from=' + e.data.from + delay);

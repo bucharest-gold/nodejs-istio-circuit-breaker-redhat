@@ -1,9 +1,9 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: nodejs-istio-circuit-breaker-name-destination
+  name: nodejs-istio-circuit-breaker-redhat-name-destination
 spec:
-  host: nodejs-istio-circuit-breaker-name
+  host: nodejs-istio-circuit-breaker-redhat-name
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL

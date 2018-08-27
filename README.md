@@ -33,8 +33,8 @@ Run the following commands to apply and execute the OpenShift templates that wil
 ```bash
 find . | grep openshiftio | grep application | xargs -n 1 oc apply -f
 
-oc new-app --template=nodejs-istio-circuit-breaker-greeting-service -p SOURCE_REPOSITORY_URL=https://github.com/bucharest-gold/nodejs-istio-circuit-breaker -p SOURCE_REPOSITORY_REF=master -p SOURCE_REPOSITORY_DIR=greeting-service
-oc new-app --template=nodejs-istio-circuit-breaker-name-service -p SOURCE_REPOSITORY_URL=https://github.com/bucharest-gold/nodejs-istio-circuit-breaker -p SOURCE_REPOSITORY_REF=master -p SOURCE_REPOSITORY_DIR=name-service
+oc new-app --template=nodejs-istio-circuit-breaker-redhat-greeting-service -p SOURCE_REPOSITORY_URL=https://github.com/bucharest-gold/nodejs-istio-circuit-breaker-redhat -p SOURCE_REPOSITORY_REF=master -p SOURCE_REPOSITORY_DIR=greeting-service
+oc new-app --template=nodejs-istio-circuit-breaker-redhat-name-service -p SOURCE_REPOSITORY_URL=https://github.com/bucharest-gold/nodejs-istio-circuit-breaker-redhat -p SOURCE_REPOSITORY_REF=master -p SOURCE_REPOSITORY_DIR=name-service
 ```
 
 ## Use Cases
@@ -49,7 +49,7 @@ Any steps issuing `oc` commands require the user to have run `oc login` first an
     ```
 2. Retrieve the URL for the Istio Ingress Gateway route, with the below command, and open it in a web browser.
     ```
-    echo http://$(oc get route istio-ingressgateway -o jsonpath='{.spec.host}{"\n"}' -n istio-system)/nodejs-istio-circuit-breaker/
+    echo http://$(oc get route istio-ingressgateway -o jsonpath='{.spec.host}{"\n"}' -n istio-system)/nodejs-istio-circuit-breaker-redhat/
     ```
 3. The user will be presented with the web page of the Booster
 4. Click "Start" to issue repeating concurrent requests in batches of 10 to the greeting service
