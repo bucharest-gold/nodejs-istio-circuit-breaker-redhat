@@ -1,5 +1,7 @@
 # Istio Circuit Breaker Mission for Node.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nodeshift-starters/nodejs-istio-circuit-breaker-redhat.svg)](https://greenkeeper.io/)
+
 ## Purpose
 
 Showcase Circuit Breaking in Istio in Node.js applications
