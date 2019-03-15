@@ -44,7 +44,7 @@
   "devDependencies": {
     "nyc": "^13.0.1",
     "rhoaster": "^0.2.0",
-    "supertest": "^4.0.0",
+    "supertest": "^4.0.1",
     "szero": "^1.0.1",
     "tap-spec": "^5.0.0",
     "tape": "~4.10.0",
